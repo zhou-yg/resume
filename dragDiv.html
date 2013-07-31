@@ -1,0 +1,99 @@
+<html>
+	<head>
+		<meta  http-equiv="Content-Type"  content="text/html;  charset=utf-8">
+		<title>拖动效果</title>
+	</head>
+	<body onselectstart="return false">
+		<div>
+			灰色区域内鼠标X Y:
+			<span id="theMouseX">
+				0
+			</span>
+			<span id="theMouseY">
+				0
+			</span>
+			<br />
+			白色区域内鼠标X Y:
+			<span id="theMouseXInP">
+				0
+			</span>
+			<span id="theMouseYInP">
+				0
+			</span>
+			<br />
+			白色区域坐标(左上角基准)X Y:
+			<span id="thePX">
+				0
+			</span>
+			<span id="thePY">
+				0
+			</span>
+		</div>
+		<div id="mouseArea" style="width: 500px;height: 500px;background: #a0a0a0;">
+			<div id="panel" style="width: 75px;height: 75px;background: #f1f1f1;position: relative;top: 100;left: 100;cursor: pointer">拖我</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		//e = event ? event : window.event;
+		var pn = document.getElementById("panel");
+		var ma = document.getElementById("mouseArea");
+		var mx = document.getElementById("theMouseX");
+		var my = document.getElementById("theMouseY");
+		var mxinP = document.getElementById("theMouseXInP");
+		var myinP = document.getElementById("theMouseYInP");
+		var px = document.getElementById("thePX");
+		var py = document.getElementById("thePY");
+
+		var P=new Object();
+
+		var dic = false;
+		pn.onmousedown = function(e) {
+			dic = true;
+			e = event ? event : window.event;
+			var mouse = getMouse(e);
+			P = getPositionInP(mouse, e);
+
+		};
+		pn.onmouseup = function() {
+			dic = false;
+		}
+		pn.onmousemove = function(e) {
+			if(dic) {
+				e = event ? event : window.event;
+				var mouse = getMouse(e);
+				
+				px.innerHTML = mouse.x-P.x
+				py.innerHTML = mouse.y-P.y
+				
+				pn.style.left = mouse.x-P.x;
+				pn.style.top = mouse.y-P.y;
+				
+			}
+		};
+		pn.onmouseover = function(){
+			dic = false;
+		}
+		function getMouse(e) {
+			var myMouse = new Object();
+			myMouse.x = e.clientX - ma.offsetLeft;
+			myMouse.y = e.clientY - ma.offsetTop;
+
+			mx.innerHTML = myMouse.x;
+			my.innerHTML = myMouse.y;
+
+			return myMouse;
+		}
+
+		function getPositionInP(m, e) {
+			var position = new Object();
+
+			mxinP.innerHTML = e.clientX - pn.offsetLeft;
+			myinP.innerHTML = e.clientY - pn.offsetTop;
+
+			position.x = (e.clientX - pn.offsetLeft);
+			position.y = (e.clientY - pn.offsetTop);
+
+			return position;
+		}
+	</script>
+</html>

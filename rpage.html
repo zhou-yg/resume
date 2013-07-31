@@ -1,0 +1,116 @@
+<html>
+	<head>
+		<title>MyResume</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<link rel="stylesheet" type="text/css" href="css/init.css" />
+		<link rel="stylesheet" type="text/css"  href="css/StyleOfMsgText.css"/>
+		<link rel="stylesheet" type="text/css"  href="css/StyleOfMsgChart.css"/>
+		<link rel="stylesheet" type="text/css" href="css/StyleOfMsgDistrict.css"/>
+		<link rel="stylesheet" type="text/css" href="css/StyleOfMsgLanguage.css"/>
+		<script src="fla/js/swfobject.js"></script>
+		<script>
+			var flashvars = {
+			};
+			var params = {
+				menu : "false",
+				scale : "noScale",
+				allowFullscreen : "true",
+				allowScriptAccess : "always",
+				bgcolor : "#999999",
+				wmode : "direct"
+			};
+			var attributes = {
+				id : "chart"
+			};
+			swfobject.embedSWF("fla/StatisticsChart.swf", "altContent", "100%", "100%", "10.0.0", "fla/expressInstall.swf", flashvars, params, attributes);
+
+		</script>
+	</head>
+	<body style="background: #f9f9f9;">
+		<div id="headerBg2" ></div>
+		<iframe id="headerIframe" src="header.html" ></iframe>
+		<h1 id="headerTitle"> MyResume </h1>
+		<div id="resumeContainer">
+			<div class="styleOfSubtitle">
+				<div class="styleOfSubtitleText">
+					基本信息
+				</div>
+				<div class="styleOfSubtitleText">
+					分类一
+				</div>
+				<div class="styleOfSubtitleText">
+					分类二
+				</div>
+			</div>
+			<div id="btnprev" ></div>
+			<div id="btnnext" ></div>
+			<div id="inResumeContainer">
+				<div id="textMsg" class="styleOfTextMsg">
+					<div id="character">
+						<p style="z-index: 2">
+							专业相关
+						</p>
+						<div id="langSectorChart" class="styleOfChart">
+							<div id="altContent">
+								<h1>StatisticsChart</h1>
+								<p>
+									<a href="http://www.adobe.com/go/getflashplayer">Get Adobe Flash player</a>
+								</p>
+							</div>
+						</div>
+						<div id="timeSectorChart" class="styleOfChart"></div>
+					</div>
+					<div id="basicMsg">
+						<div id="imgContaienr"></div>
+						<div>
+							<div class="textType0">
+								ZYG     21岁
+							</div>
+						</div>
+						<br />
+						<div>
+							<div class="textType1">
+								学历:本科就读(大二)
+							</div>
+							<div class="textType1">
+								学校:浙江工业大学
+							</div>
+							<div class="textType0">
+								专业:软件工程
+							</div>
+							<div class="textType0">
+								英语:4级
+							</div>
+							<div class="textType1">
+								籍贯:浙江温州
+							</div>
+						</div>
+						<br />
+						<div>
+							<div class="textType1">
+								电话:188688*****
+							</div>
+							<div class="textType2">
+								邮箱:harald***@***.com
+							</div>
+						</div>
+						<div>
+							<div class="describeText">
+								a
+								<br />
+								b
+								<br />
+								c
+								<br />
+								d
+								<br />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="part2" class="styleOfTextMsg"></div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/in.js"></script>
+</html>

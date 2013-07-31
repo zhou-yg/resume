@@ -1,0 +1,8 @@
+.styleOfChart{
+	background: #333333;
+	width:345px;
+	height:205px;
+	
+	position: relative;
+	top: -50px;
+}

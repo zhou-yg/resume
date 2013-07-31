@@ -1,0 +1,90 @@
+.styleOfTextMsg{
+	width: 810px;
+	height: 465px;
+	
+	padding:10px;
+	position:relative;
+	
+	float: left;
+}
+#character{
+	padding-top:27.5px;
+	padding-bottom:27.5px;
+	padding-left:20px;
+	padding-right:20px;
+	background:#999999;
+	
+	width:360px;
+	height:410px;
+
+	float: left;
+}
+#basicMsg{
+	padding-top:27.5px;
+	padding-bottom:27.5px;
+	padding-left:20px;
+	padding-right:20px;
+	background:#999999;
+	width:360px;
+	height:410px;
+	
+	position:relative;
+	left:10px;
+	
+	float: left;
+}
+#imgContaienr{
+	background:#ffffff;
+	width:40%;
+	height:35%;
+	
+	float: right;
+}
+#btnprev {
+	background: url(/MyServer/Resume/p/btnLeft.png) no-repeat 0 0;
+	z-index: 2;
+
+	position: absolute;
+	top: 225px;
+	left: 0;
+
+	width: 34px;
+	height: 100px;
+
+	cursor: pointer;
+}
+#btnnext {
+	background: url(/MyServer/Resume/p/btnRight.png) no-repeat 0 0;
+	z-index: 2;
+
+	position: absolute;
+	top: 225px;
+	right: 0;
+
+	width: 34px;
+	height: 100px;
+
+	cursor: pointer;
+}
+.textType0{
+	margin: 5px 5px;
+	background:#ffffff;
+	width:35%;
+}
+.textType1{
+	margin: 5px 5px;
+	background:#ffffff;
+	width:55%;
+}
+.textType2{
+	margin: 5px 5px;
+	background:#ffffff;
+	width:65%;
+}
+.describeText{
+	background:#ffffff;
+	width:100%;
+	height:35%;
+	line-height:100%;
+	overflow: hidden;
+}
