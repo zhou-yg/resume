@@ -38,7 +38,10 @@ body {
 	color:#555555;
 }
 .styleOfSubtitle {
-	margin: 5px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	position: relative;
+	left: -10px;
 }
 .styleOfSubtitleText {
 	background:#06A7FF;

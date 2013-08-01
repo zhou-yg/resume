@@ -1,0 +1,17 @@
+.home-langList{
+	background: #a0a0a0;
+	width: 30%;
+	height: 93px;
+	margin-top:11.625px;
+	margin-bottom:11.625px;
+	float: right;
+}
+#home-langmsgWindow{
+	background: #FFFFFF;
+	width: 61.8%;
+	height: 441.75px;
+	margin-top:11.625px;
+	margin-left:5%;
+	margin-right:2%;
+	float: right;
+}
