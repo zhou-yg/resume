@@ -5,7 +5,6 @@
 		<link rel="stylesheet" type="text/css" href="css/init.css" />
 		<link rel="stylesheet" type="text/css"  href="css/StyleOfMsgText.css"/>
 		<link rel="stylesheet" type="text/css"  href="css/StyleOfMsgChart.css"/>
-		<link rel="stylesheet" type="text/css" href="css/StyleOfMsgDistrict.css"/>
 		<link rel="stylesheet" type="text/css" href="css/StyleOfMsgLanguage.css"/>
 		<script src="fla/js/swfobject.js"></script>
 		<script>
@@ -32,20 +31,20 @@
 		<h1 id="headerTitle"> MyResume </h1>
 		<div id="resumeContainer">
 			<div class="styleOfSubtitle">
-				<div class="styleOfSubtitleText">
+				<div id="type0" class="styleOfSubtitleText">
 					基本信息
 				</div>
-				<div class="styleOfSubtitleText">
-					分类一
+				<div id="type1" class="styleOfSubtitleText">
+					专业技能
 				</div>
-				<div class="styleOfSubtitleText">
-					分类二
+				<div id="type2"  class="styleOfSubtitleText">
+					项目相关
 				</div>
 			</div>
 			<div id="btnprev" ></div>
 			<div id="btnnext" ></div>
 			<div id="inResumeContainer">
-				<div id="textMsg" class="styleOfTextMsg">
+				<div id="basicMsgWindow" class="styleOfTextMsg">
 					<div id="character">
 						<p style="z-index: 2">
 							专业相关
@@ -108,7 +107,9 @@
 						</div>
 					</div>
 				</div>
-				<div id="part2" class="styleOfTextMsg"></div>
+				<div id="professionalSkillWindow" class="styleOfTextMsg">
+					
+				</div>
 			</div>
 		</div>
 	</body>
