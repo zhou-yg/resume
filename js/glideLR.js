@@ -13,28 +13,7 @@ var glideLR = function() {
 	var rateArr = [16,32,64];
 	var speed = 0;
 	var speedArr = [35,28,23];
-
-	var Im = function() {
-		return {
-			getObj:function (id) {
-				if(document.getElementById(id) != undefined) {
-					return document.getElementById(id);
-				} else {
-					return document.getElementById("headerIframe").contentWindow.document.getElementById(id);
-				}
-			}
-			,
-			getObjStyle:function (obj, key) {
-				var value = null;
-				if(obj.currentStyle) {
-					value = obj.currentStyle[key];
-				} else {
-					value = window.getComputedStyle(obj).getPropertyValue(key);
-				}
-				return value;
-			}
-		}
-	}();
+	
 	var Re = function(){
 		return{
 			reSet:function(){

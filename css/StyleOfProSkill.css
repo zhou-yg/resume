@@ -1,10 +1,15 @@
 .home-langList{
-	background: #a0a0a0;
+	background: #FFFFFF;
+	/*#06A7FF*/
 	width: 30%;
-	height: 93px;
+	height: 31px;
+	line-height:31px;
 	margin-top:11.625px;
 	margin-bottom:11.625px;
+	padding-left:5px;
 	float: right;
+	
+	cursor: pointer;
 }
 #home-langmsgWindow{
 	background: #FFFFFF;
