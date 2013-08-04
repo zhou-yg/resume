@@ -22,7 +22,7 @@
 			width: 250px;
 			height: 250px;
 			background: #e3e3e3;
-			position: relative;
+			position:relative;
 			left: 0px;
 			top: 0px;
 			transition:background 2s;
@@ -30,7 +30,17 @@
 			-webkit-transition:background 2s;	/* Safari 和 Chrome */
 			-o-transition:background 2s;
 		}
-
+		#lineTo:hover{
+			background: #06A7FF;
+		}
+		#line{
+			opacity:1;
+			width:0;
+			height:0;
+			border-width: 1px;
+			border-style: solid;
+			border-color:red;
+		}
 	</style>
 	<body>
 		<div id="headC">
@@ -42,5 +52,5 @@
 	</body>
 	<script type="text/javascript" src="js/in.js"></script>
 	<script type="text/javascript" src="js/glideLR.js"></script>
-	<script type="text/javascript"></script>
+	<script type="text/javascript" src="js/lineTo.js"></script>
 </html>

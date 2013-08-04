@@ -52,6 +52,8 @@ body {
 	width: 80px;
 	display: inline-block;
 	cursor: pointer;
+	
+	transition:background 1s;
 	-moz-transition: background 1s;	/* Firefox 4 */
 	-webkit-transition: background 1s;	/* Safari 和 Chrome */
 	-o-transition: background 1s;
