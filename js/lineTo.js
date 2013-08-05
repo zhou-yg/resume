@@ -1,4 +1,4 @@
-var lineTo = function() {
+var lineto = function() {
 
 	var thickness = 1;
 	var color = "#000000";
@@ -64,6 +64,6 @@ var lineTo = function() {
 		}
 	}
 }();
-lineTo.lineSpot("lineTo");
-lineTo.lineStyle(5,"red",1,40);
-lineTo.drawLineTo(20,20,50,180);
+lineto.lineSpot("lineTo");
+lineto.lineStyle(5,"red",1,40);
+lineto.drawLineTo(20,20,50,180);

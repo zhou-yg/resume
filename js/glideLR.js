@@ -1,4 +1,4 @@
-var glideLR = function() {
+var glidelr = function() {
 
 	var glideObj = undefined;
 	var glideDistance = 0;

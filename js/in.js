@@ -91,7 +91,7 @@ var Im = function() {
 			if(document.getElementById(id) != undefined) {
 				return document.getElementById(id);
 			} else {
-				return document.getElementById("headerIframe").contentWindow.document.getElementById(id);
+				return document.getElementById(id[0]).contentWindow.document.getElementById(id[1]);
 			}
 		},
 		getObjStyle : function(obj, key) {

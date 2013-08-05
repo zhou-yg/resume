@@ -1,4 +1,4 @@
-var onSelectFrame = function(){
+var onoption = function(){
 	
 	var idArr = new Array();
 	
@@ -54,10 +54,10 @@ var idlangArr = ["select-as","select-java","select-php","select-js","select-c"];
 var idtitleArr = ["type0","type1","type2"];
 
 /////////////////////////////////
-var onTitleFrame = onSelectFrame;
+var onsubtitle = onoption;
+var onlangtype = onoption;
+onsubtitle = onsubtitle();
+onlangtype = onlangtype();
 
-onTitleFrame = onTitleFrame();
-onSelectFrame = onSelectFrame();
-
-onTitleFrame.init(idtitleArr);
-onSelectFrame.init(idlangArr);
+onsubtitle.init(idtitleArr);
+onlangtype.init(idlangArr);
