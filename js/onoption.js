@@ -10,6 +10,9 @@ var onoption = function(){
 			init:function(){
 				oncrutObjId = idArr[0];
 				var obj = Im.getObj(oncrutObjId);
+								var obj2 = Im.getObj("home-langmsgWindow");
+				obj2.style.background = "#06A7FF";
+
 				obj.style.background = "#06A7FF";
 				obj.style.color = "#ffffff";
 			}
@@ -20,14 +23,24 @@ var onoption = function(){
 					obj.style.background = "#06A7FF";
 					obj.style.color = "#ffffff";
 					this.reset(oncrutObjId);
+					if(lineArr[idlangArr.indexOf(id)]!=undefined){
+						lineArr[idlangArr.indexOf(id)].drawLineTo(248, 15.5, 288, 15.5); ;
+					}
 					oncrutObjId = id;
 				}
 			}
 			,
+			outchangeColor:function(id){
+				
+			}
+			,
 			reset:function(id){
-					var obj = Im.getObj(id);
-					obj.style.background = "#ffffff";
-					obj.style.color = "#000000";
+				if(lineArr[idlangArr.indexOf(id)]!=undefined){
+					lineArr[idlangArr.indexOf(id)].clearLine();
+				}
+				var obj = Im.getObj(id);
+				obj.style.background = "#ffffff";
+				obj.style.color = "#000000";
 			}
 		}
 	}();
@@ -44,20 +57,11 @@ var onoption = function(){
 		setEvent:function(){
 			for(var i=0;i<idArr.length;i++){
 				var frameObj = Im.getObj(idArr[i]);
-				frameObj.onmouseover = function(){EH.onchangeColor(this.id)};
+				frameObj.onmouseover = function(){
+					EH.onchangeColor(this.id);
+					EH.outchangeColor(this.id);
+				};
 			}
 		}
 	}
 };
-var langArr = ["Flash AS","Java","PHP","HTML+CSS+JavaScript","C/C++","Android","mysql","sqlite","sqlserver"];
-var idlangArr = ["select-as","select-java","select-php","select-js","select-c"];
-var idtitleArr = ["type0","type1","type2"];
-
-/////////////////////////////////
-var onsubtitle = onoption;
-var onlangtype = onoption;
-onsubtitle = onsubtitle();
-onlangtype = onlangtype();
-
-onsubtitle.init(idtitleArr);
-onlangtype.init(idlangArr);

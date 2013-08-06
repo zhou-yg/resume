@@ -44,19 +44,33 @@ function sendRequest(url, params, type, processResponse) {
 	}
 }
 
-function toJSONString(arrs) {
-	var beginC = "{"
+function toJSONString(arrs,indexarr) {
+	var beginC = "{";
 	var endC = "}";
 	var data = beginC;
-	for(var i = 0; i < arrs.length; i++) {
-		data += "num" + i;
-		data += ":"
-		data += "'" + arrs[i] + "'";
-		if(i != arrs.length - 1) {
-			data += ","
+	if(indexarr==undefined){
+		for(var i = 0; i < arrs.length; i++) {
+			data += "num" + i;
+			data += ":"
+			data += "'" + arrs[i] + "'";
+			if(i != arrs.length - 1) {
+				data += ","
+			}
 		}
+		data += endC;
+	}else if(arrs.length == indexarr.length){
+		for(var i = 0; i < arrs.length; i++) {
+			data += indexarr[i];
+			data += ":"
+			data += "'" + arrs[i] + "'";
+			if(i != arrs.length - 1) {
+				data += ","
+			}
+		}
+		data += endC;
+	}else{
+		data = "error in arr's length"
 	}
-	data += endC;
 	return data;
 }
 
@@ -88,11 +102,14 @@ function getObjStyle(obj, key) {
 var Im = function() {
 	return {
 		getObj : function(id) {
+				return document.getElementById(id);
+			/*
 			if(document.getElementById(id) != undefined) {
 				return document.getElementById(id);
 			} else {
 				return document.getElementById(id[0]).contentWindow.document.getElementById(id[1]);
 			}
+			*/
 		},
 		getObjStyle : function(obj, key) {
 			var value = null;
@@ -102,6 +119,36 @@ var Im = function() {
 				value = window.getComputedStyle(obj).getPropertyValue(key);
 			}
 			return value;
+		}
+		,
+		toJSONString : function (arrs,indexarr) {
+			var beginC = "{";
+			var endC = "}";
+			var data = beginC;
+			if(indexarr==undefined){
+				for(var i = 0; i < arrs.length; i++) {
+					data += "num" + i;
+					data += ":"
+					data += "'" + arrs[i] + "'";
+					if(i != arrs.length - 1) {
+						data += ","
+					}
+				}
+				data += endC;
+			}else if(arrs.length == indexarr.length){
+				for(var i = 0; i < arrs.length; i++) {
+					data += "'"+indexarr[i]+"'";
+					data += ":"
+					data += arrs[i];
+					if(i != arrs.length - 1) {
+						data += ","
+					}
+				}
+				data += endC;
+			}else{
+				data = "error in arr's length"
+			}
+			return data;
 		}
 	}
 }();

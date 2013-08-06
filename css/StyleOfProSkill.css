@@ -10,7 +10,9 @@
 	margin-bottom: 11.625px;
 	padding-left: 5px;
 	
-	float: right;
+	position:relative;
+	
+	float: left;
 	cursor: pointer;
 	
 	transition:background 1s;
@@ -20,10 +22,19 @@
 }
 #home-langmsgWindow {
 	background: #FFFFFF;
-	width: 61.8%;
-	height: 441.75px;
+	color:#FFFFFF;
+	width: 55.8%;
+	height: 401.75px;
 	margin-top: 11.625px;
-	margin-left: 5%;
-	margin-right: 2.5%;
+	margin-right: 20px;
+	padding-left:3%;
+	padding-right:3%;
+	padding-top:10px;
+	padding-bottom:20px;
 	float: right;
+	
+	transition:background 1.5s;
+	-moz-transition: background 1.5s;	/* Firefox 4 */
+	-webkit-transition: background 1.5s;	/* Safari 和 Chrome */
+	-o-transition: background 1.5s;
 }
