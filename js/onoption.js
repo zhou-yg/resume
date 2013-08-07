@@ -10,9 +10,8 @@ var onoption = function(){
 			init:function(){
 				oncrutObjId = idArr[0];
 				var obj = Im.getObj(oncrutObjId);
-								var obj2 = Im.getObj("home-langmsgWindow");
+				var obj2 = Im.getObj("home-langmsgWindow");
 				obj2.style.background = "#06A7FF";
-
 				obj.style.background = "#06A7FF";
 				obj.style.color = "#ffffff";
 			}
@@ -20,8 +19,12 @@ var onoption = function(){
 			onchangeColor:function(id){
 				if(id != oncrutObjId){
 					var obj = Im.getObj(id);
-					obj.style.background = "#06A7FF";
-					obj.style.color = "#ffffff";
+					if(langColorArr[idlangArr.indexOf(id)]!=undefined){
+						obj.style.background = langColorArr[idlangArr.indexOf(id)];
+						Im.getObj("home-langmsgWindow").style.background = langColorArr[idlangArr.indexOf(id)];
+					}else{
+						obj.style.background = "#06A7FF";
+					}
 					this.reset(oncrutObjId);
 					if(lineArr[idlangArr.indexOf(id)]!=undefined){
 						lineArr[idlangArr.indexOf(id)].drawLineTo(248, 15.5, 290, 15.5);
