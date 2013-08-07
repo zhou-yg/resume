@@ -7,6 +7,7 @@ var lineto = function(_name) {
 	var area;
 	var createTimeout;
 	var deleteTimeout;
+	var hasline = false;
 	var oncreate = false;
 	var ondelete = false;
 	var createline = [];
@@ -47,7 +48,7 @@ var lineto = function(_name) {
 		},
 		drawLineTo : function(_x0, _y0, _x1, _y1) {
 			if (area != undefined) {
-				if (!oncreate && !ondelete) {
+				if (!oncreate && !ondelete && !hasline) {
 					x0 = _x0;
 					y0 = _y0;
 					x1 = _x1;
@@ -112,6 +113,7 @@ var lineto = function(_name) {
 			} else {
 				clearTimeout(createTimeout);
 				oncreate = false;
+				hasline = true;
 			}
 		}
 		,
@@ -138,7 +140,12 @@ var lineto = function(_name) {
 			} else {
 				clearTimeout(deleteTimeout);
 				ondelete = false;
+				hasline = false;
 			}
+		}
+		,
+		hasline : function(){
+			return hasline;
 		}
 		,
 		param : function() {

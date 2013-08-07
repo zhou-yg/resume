@@ -49,4 +49,4 @@ lineto5.lineStyle(2, "#06A7FF", 1, 40);
 lineArr = [lineto1, lineto2, lineto3, lineto4, lineto5];
 
 //lineJSONObject = eval("("+Im.toJSONString(lineArr,linespotArr)+")")
-lineto1.drawLineTo(248, 15.5, 288, 15.5);
+lineto1.drawLineTo(248, 15.5, 290, 15.5);

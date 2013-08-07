@@ -24,14 +24,18 @@ var onoption = function(){
 					obj.style.color = "#ffffff";
 					this.reset(oncrutObjId);
 					if(lineArr[idlangArr.indexOf(id)]!=undefined){
-						lineArr[idlangArr.indexOf(id)].drawLineTo(248, 15.5, 288, 15.5); ;
+						lineArr[idlangArr.indexOf(id)].drawLineTo(248, 15.5, 290, 15.5);
 					}
 					oncrutObjId = id;
 				}
 			}
 			,
 			outchangeColor:function(id){
-				
+				if(lineArr[idlangArr.indexOf(id)]!=undefined){
+					if(!lineArr[idlangArr.indexOf(id)].hasline()){
+						lineArr[idlangArr.indexOf(id)].drawLineTo(248, 15.5, 290, 15.5); ;
+					}
+				}
 			}
 			,
 			reset:function(id){
@@ -56,11 +60,13 @@ var onoption = function(){
 		,
 		setEvent:function(){
 			for(var i=0;i<idArr.length;i++){
-				var frameObj = Im.getObj(idArr[i]);
-				frameObj.onmouseover = function(){
+				var selectObj = Im.getObj(idArr[i]);
+				selectObj.onmouseover = function(){
 					EH.onchangeColor(this.id);
-					EH.outchangeColor(this.id);
 				};
+				selectObj.onmousemove =  function(){
+					EH.outchangeColor(this.id);
+				}
 			}
 		}
 	}
