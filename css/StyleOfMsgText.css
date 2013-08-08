@@ -9,25 +9,18 @@
 	float: left;
 }
 #character{
-	padding-top:27.5px;
-	padding-bottom:27.5px;
-	padding-left:20px;
-	padding-right:20px;
+	padding:10px;
 	background:#999999;
-	
-	width:44.4%;
-	height:88.2%;
+	width:385px;
+	height:445px;
 
 	float: left;
 }
 #basicMsg{
-	padding-top:27.5px;
-	padding-bottom:27.5px;
-	padding-left:20px;
-	padding-right:20px;
+	padding:10px;
 	background:#999999;
-	width:44.4%;
-	height:88.2%;
+	width:385px;
+	height:445px;
 	
 	position:relative;
 	left:10px;
@@ -35,7 +28,6 @@
 	float: left;
 }
 #imgContaienr{
-	background:#ffffff;
 	width:40%;
 	height:35%;
 	
@@ -69,7 +61,7 @@
 }
 .styleOfChart{
 	background: #333333;
-	width:345px;
+	width:360px;
 	height:205px;
 	
 	position: relative;
