@@ -13,7 +13,8 @@ body{
 #headerBgText{
 	background:none;
 	margin:1px auto;
-	width:850px;
+	padding-left:10px;
+	width:830px;
 	height:100%;
 	
 	color:#FFFFFF;

@@ -1,15 +1,25 @@
 var langArr = ["Flash AS", "Java", "PHP", "HTML+CSS+JavaScript", "C/C++", "Android", "mysql", "sqlite", "sqlserver"];
 var idlangArr = ["select-as", "select-java", "select-php", "select-js", "select-c"];
-var langColorArr = ["#06A7FF","#33CC33","#CCCCFF","#FFCCCC","#FFCC99"];
-var idtitleArr = ["type0", "type1", "type2"];
+var langColorArr = ["#06A7FF","#33CC33","#CCCCFF","#FFCCCC","#FFCC99"];//#ff9636 #1e8cbe
+var idtitleArr = ["type0", "type1"];
+//var idtitleArr = ["type0", "type1","type2"];
+var windowArr = ["basicMsgWindow","professionalSkillWindow"];
 var onsubtitle = onoption;
 var onlangtype = onoption;
 
 onsubtitle = onsubtitle();
 onlangtype = onlangtype();
 
-onsubtitle.init(idtitleArr);
-onlangtype.init(idlangArr);
+onsubtitle.init(idtitleArr,langColorArr);
+onlangtype.init(idlangArr,langColorArr);
+
+var glideArr = [];
+var glide1 = glidelr;
+var glide2 = glidelr;
+glide1 = glide1("glide1");
+glide2 = glide2("glide2");
+glideArr = [glide1,glide2];
+glide.init(idtitleArr,windowArr,830);
 //==================//
 var lineto1
 var lineto2
@@ -51,3 +61,4 @@ lineArr = [lineto1, lineto2, lineto3, lineto4, lineto5];
 
 //lineJSONObject = eval("("+Im.toJSONString(lineArr,linespotArr)+")")
 lineto1.drawLineTo(248, 15.5, 290, 15.5);
+//==========================//

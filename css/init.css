@@ -34,8 +34,19 @@ body {
 #headerTitle{
 	margin: 5px auto;
 	width: 850px;
-	
+	text-align:center;
 	color:#555555;
+}
+#headT{
+	background:none;
+	color: rgb(144, 144, 144);
+	font-size:20px;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	width: 80px;
+	margin-right:10px;
+	display: inline-block;
 }
 .styleOfSubtitle {
 	margin-top: 5px;
@@ -45,11 +56,12 @@ body {
 	left: -10px;
 }
 .styleOfSubtitleText {
-	background:#FFFFFF;
+	background:none;
 	color: #000000;
+	font-size:15px;
 	text-align: center;
-	height: 25px;
-	line-height: 25px;
+	height: 30px;
+	line-height: 30px;
 	width: 80px;
 	display: inline-block;
 	cursor: pointer;

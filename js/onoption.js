@@ -1,7 +1,7 @@
 var onoption = function(){
 	
 	var idArr = new Array();
-	
+	var colorArr = [];
 	var EH = function(){
 		
 		var oncrutObjId;
@@ -10,8 +10,10 @@ var onoption = function(){
 			init:function(){
 				oncrutObjId = idArr[0];
 				var obj = Im.getObj(oncrutObjId);
+				//------------------------------------------
 				var obj2 = Im.getObj("home-langmsgWindow");
 				obj2.style.background = "#06A7FF";
+				//-----------------------------------------
 				obj.style.background = "#06A7FF";
 				obj.style.color = "#ffffff";
 			}
@@ -19,26 +21,32 @@ var onoption = function(){
 			onchangeColor:function(id){
 				if(id != oncrutObjId){
 					var obj = Im.getObj(id);
-					if(langColorArr[idlangArr.indexOf(id)]!=undefined){
-						obj.style.background = langColorArr[idlangArr.indexOf(id)];
-						Im.getObj("home-langmsgWindow").style.background = langColorArr[idlangArr.indexOf(id)];
+					if(colorArr[idlangArr.indexOf(id)]!=undefined){
+						obj.style.background = colorArr[idlangArr.indexOf(id)];
+						//-----------------------------------------------------------------------------------
+						Im.getObj("home-langmsgWindow").style.background = colorArr[idlangArr.indexOf(id)];
+						//-----------------------------------------------------------------------------------
 					}else{
-						obj.style.background = "#06A7FF";
+						obj.style.background = colorArr[0];
 					}
 					this.reset(oncrutObjId);
 					if(lineArr[idlangArr.indexOf(id)]!=undefined){
+						//--------------------------------------------------------------
 						lineArr[idlangArr.indexOf(id)].drawLineTo(248, 15.5, 290, 15.5);
+						//--------------------------------------------------------------
 					}
 					oncrutObjId = id;
 				}
 			}
 			,
 			outchangeColor:function(id){
+				//-----------------------------------------------------------------------
 				if(lineArr[idlangArr.indexOf(id)]!=undefined){
 					if(!lineArr[idlangArr.indexOf(id)].hasline()){
 						lineArr[idlangArr.indexOf(id)].drawLineTo(248, 15.5, 290, 15.5); ;
 					}
 				}
+				//------------------------------------------------------------------------
 			}
 			,
 			reset:function(id){
@@ -46,15 +54,20 @@ var onoption = function(){
 					lineArr[idlangArr.indexOf(id)].clearLine();
 				}
 				var obj = Im.getObj(id);
-				obj.style.background = "#ffffff";
+				if(idtitleArr.indexOf(id)!=-1){
+					obj.style.background = "none";
+				}else if(idlangArr.indexOf(id)!=-1){
+					obj.style.background = "#ffffff";
+				}
 				obj.style.color = "#000000";
 			}
 		}
 	}();
 	return{
-		init:function(arr){
-			idArr = arr;
-
+		init:function(iarr,carr){
+			idArr = iarr;
+			colorArr = carr;
+			
 			EH.init();
  
  			this.setEvent();
