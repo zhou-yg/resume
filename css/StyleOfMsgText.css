@@ -2,25 +2,26 @@
 	/*background:#a0a0a0;*/
 	width: 810px;
 	height: 465px;
-	
 	padding:10px;
 	position:relative;
 	left:0px;
+	/*font-family:"Open Sans", sans-serif;*/
+	color:#78c8e6;
 	float: left;
 }
 #character{
 	padding:10px;
-	background:#999999;
-	width:385px;
-	height:445px;
+	background:#DDDDDD;
+	width:380px;
+	height:440px;
 
 	float: left;
 }
 #basicMsg{
 	padding:10px;
-	background:#999999;
-	width:385px;
-	height:445px;
+	background:#DDDDDD;
+	width:380px;
+	height:440px;
 	
 	position:relative;
 	left:10px;

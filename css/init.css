@@ -1,6 +1,14 @@
 body {
-	margin:0;
+	margin: 0;
 	font-family: "Microsoft YaHei", "微软雅黑", SimHei, helvetica, arial, verdana, tahoma, sans-serif;
+}
+#headerBg2 {
+	margin: 0 auto;
+	background:rgb(240,240,240);;
+	width: 850px;
+	height: 60px;
+	z-index: -1;
+	position: absolute;
 }
 #headerIframe {
 	margin-left: auto;
@@ -17,29 +25,28 @@ body {
 	width: 830px;
 	height: 520px;
 	padding: 10px;
-	position:relative;
-	
-	overflow:hidden;
+	position: relative;
+	overflow: hidden;
 }
-#inResumeContainer{
-	width:450%;
+#inResumeContainer {
+	width: 450%;
 	height: 485px;
 }
-#headerTitle{
+#headerTitle {
 	margin: 5px auto;
 	width: 830px;
-	height:50px;
-	color:#555555;
+	height: 50px;
+	color: #555555;
 }
-#headT{
-	background:none;
+#headT {
+	background: none;
 	color: rgb(144, 144, 144);
-	font-size:20px;
+	font-size: 20px;
 	text-align: center;
 	height: 30px;
 	line-height: 30px;
 	width: 80px;
-	margin-right:10px;
+	margin-right: 10px;
 	display: inline-block;
 }
 .styleOfSubtitle {
@@ -49,17 +56,16 @@ body {
 	left: 10px;
 }
 .styleOfSubtitleText {
-	background:none;
+	background: none;
 	color: #000000;
-	font-size:15px;
+	font-size: 15px;
 	text-align: center;
 	height: 30px;
 	line-height: 30px;
 	width: 80px;
 	display: inline-block;
 	cursor: pointer;
-	
-	transition:background 1s;
+	transition: background 1s;
 	-moz-transition: background 1s;	/* Firefox 4 */
 	-webkit-transition: background 1s;	/* Safari 和 Chrome */
 	-o-transition: background 1s;

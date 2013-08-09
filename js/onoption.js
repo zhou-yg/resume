@@ -11,7 +11,7 @@ var onoption = function(){
 				oncrutObjId = idArr[0];
 				var obj = Im.getObj(oncrutObjId);
 				//------------------------------------------
-				var obj2 = Im.getObj("home-langmsgWindow");
+				var obj2 = Im.getObj("langContent");
 				obj2.style.background = "#06A7FF";
 				//-----------------------------------------
 				obj.style.background = "#06A7FF";
@@ -24,15 +24,16 @@ var onoption = function(){
 					if(colorArr[idlangArr.indexOf(id)]!=undefined){
 						obj.style.background = colorArr[idlangArr.indexOf(id)];
 						//-----------------------------------------------------------------------------------
-						Im.getObj("home-langmsgWindow").style.background = colorArr[idlangArr.indexOf(id)];
+						Im.getObj("langContent").style.background = colorArr[idlangArr.indexOf(id)];
 						//-----------------------------------------------------------------------------------
 					}else{
 						obj.style.background = colorArr[0];
 					}
+					obj.style.color = "#ffffff";
 					this.reset(oncrutObjId);
 					if(lineArr[idlangArr.indexOf(id)]!=undefined){
 						//--------------------------------------------------------------
-						lineArr[idlangArr.indexOf(id)].drawLineTo(248, 15.5, 290, 15.5);
+						lineArr[idlangArr.indexOf(id)].drawLineTo(248, 15.5, 315, 15.5);
 						//--------------------------------------------------------------
 					}
 					oncrutObjId = id;
@@ -43,7 +44,7 @@ var onoption = function(){
 				//-----------------------------------------------------------------------
 				if(lineArr[idlangArr.indexOf(id)]!=undefined){
 					if(!lineArr[idlangArr.indexOf(id)].hasline()){
-						lineArr[idlangArr.indexOf(id)].drawLineTo(248, 15.5, 290, 15.5); ;
+						lineArr[idlangArr.indexOf(id)].drawLineTo(248, 15.5, 315, 15.5); ;
 					}
 				}
 				//------------------------------------------------------------------------
