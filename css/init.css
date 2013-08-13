@@ -49,6 +49,32 @@ body {
 	margin-right: 10px;
 	display: inline-block;
 }
+#btnprev {
+	background: url(/MyServer/apps/Resume/p/btnLeft.png) no-repeat 0 0;
+	z-index: 2;
+
+	position: absolute;
+	top: 225px;
+	left: 0;
+
+	width: 34px;
+	height: 100px;
+
+	cursor: pointer;
+}
+#btnnext {
+	background: url(/MyServer/apps/Resume/p/btnRight.png) no-repeat 0 0;
+	z-index: 2;
+
+	position: absolute;
+	top: 225px;
+	right: 0;
+
+	width: 34px;
+	height: 100px;
+
+	cursor: pointer;
+}
 .styleOfSubtitle {
 	margin-top: 5px;
 	margin-bottom: 15px;

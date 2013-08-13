@@ -1,92 +1,114 @@
-.styleOfTextMsg{
+.styleOfTextMsg {
 	/*background:#a0a0a0;*/
 	width: 810px;
 	height: 465px;
-	padding:10px;
-	position:relative;
-	left:0px;
+	padding: 10px;
+	position: relative;
+	left: 0px;
 	/*font-family:"Open Sans", sans-serif;*/
-	color:#78c8e6;
+	color: #78c8e6;
 	float: left;
 }
-#character{
-	padding:10px;
-	background:#DDDDDD;
-	width:380px;
-	height:440px;
-
+#inreal {
+	padding: 10px;
+	background: #DDDDDD;
+	width: 380px;
+	height: 440px;
 	float: left;
 }
-#basicMsg{
-	padding:10px;
-	background:#DDDDDD;
-	width:380px;
-	height:440px;
-	
-	position:relative;
-	left:10px;
-	
+#inweb {
+	padding: 10px;
+	background: #DDDDDD;
+	width: 380px;
+	height: 440px;
+	position: relative;
+	left: 10px;
 	float: left;
 }
-#imgContaienr{
-	width:40%;
-	height:35%;
-	
+#imgContaienrInreal {
+	width: 40%;
+	height: 35%;
+	float: left;
+}
+#imgContaienrInweb {
+	width: 40%;
+	height: 35%;
 	float: right;
 }
-#btnprev {
-	background: url(/MyServer/Resume/p/btnLeft.png) no-repeat 0 0;
-	z-index: 2;
-
-	position: absolute;
-	top: 225px;
-	left: 0;
-
-	width: 34px;
-	height: 100px;
-
-	cursor: pointer;
+#r1 {
+	width: 60%;
+	height: 31%;
+	padding-top:5%;
+	background: #999999;
+	color:#FFFFFF;
+	float: left;
 }
-#btnnext {
-	background: url(/MyServer/Resume/p/btnRight.png) no-repeat 0 0;
-	z-index: 2;
-
-	position: absolute;
-	top: 225px;
-	right: 0;
-
-	width: 34px;
-	height: 100px;
-
-	cursor: pointer;
+#r1-p{
+	width: 40%;
+	height: 100%;
+	float: left;
 }
-.styleOfChart{
-	background: #333333;
-	width:360px;
-	height:205px;
-	
-	position: relative;
-	top: -50px;
+#r1-v{
+	width: 60%;
+	height: 100%;
+	float: left;
 }
-.textType0{
-	margin: 5px 5px;
-	background:#ffffff;
-	width:35%;
+.styleOfr1p{
+	width:90px;
+	margin-top:6%;
+	margin-bottom:6%;
+	margin-right:15px;
+	text-align:right;
+	font-size:12px;
+	font-family:Arial,Helvetica,sans-serif;
+	float: right;
 }
-.textType1{
-	margin: 5px 5px;
-	background:#ffffff;
-	width:55%;
+.styleOfw1v{
+	width:90px;
+	margin-top:4%;
+	margin-bottom:4%;
+	text-align:left;
+	font-size:12px;
+	font-family:Arial,Helvetica,sans-serif;
+	float: left;
 }
-.textType2{
-	margin: 5px 5px;
-	background:#ffffff;
-	width:65%;
+#r2{
+	width: 35%;
+	height: 60%;
+	padding:2.5%;
+	background: #777777;
+	color:#FFFFFF;
+	float: left;
 }
-.describeText{
-	background:#ffffff;
-	width:100%;
-	height:35%;
-	line-height:100%;
-	overflow: hidden;
+#r3{
+	width: 55%;
+	height: 60%;
+	padding:2.5%;
+	background: #555555;
+	color:#FFFFFF;
+	float: left;
+}
+#w1 {
+	width: 55%;
+	height: 31%;
+	padding:2.5%;
+	background: #999999;
+	color:#FFFFFF;
+	float: right;
+}
+#w2 {
+	width: 35%;
+	height: 60%;
+	padding:2.5%;
+	background: #777777;
+	color:#FFFFFF;
+	float: right;
+}
+#w3 {
+	width: 55%;
+	height: 60%;
+	padding:2.5%;
+	background: #555555;
+	color:#FFFFFF;
+	float: right;
 }

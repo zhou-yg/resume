@@ -12,8 +12,8 @@
 		</script>
 	</head>
 	<body style="background: #f9f9f9;">
-		<div id="headerBg2"> </div>
-		<iframe id="headerIframe" src="header.html" > </iframe>
+		<div id="headerBg2"></div>
+		<iframe id="headerIframe" src="header.html" ></iframe>
 		<div id="resumeContainer">
 			<div class="styleOfSubtitle">
 				<span id="headT">个人简历</span>
@@ -27,41 +27,22 @@
 					项目相关
 				</span>
 			</div>
-			<div id="btnprev" > </div>
-			<div id="btnnext" > </div>
+			<div id="btnprev" ></div>
+			<div id="btnnext" ></div>
 			<div id="inResumeContainer">
 				<div id="basicMsgWindow" class="styleOfTextMsg">
-					<div id="inreal">
-						<div id="imgContaienrInreal"><img src="p/r2.png" width="100%" height="100%" /></div>
-						<div id="r1">
-							<div id="r1-p"> 
-								<span class="styleOfr1p">姓名  </span>
-								<span class="styleOfr1p">性别  </span>
-								<span class="styleOfr1p">籍贯 </span>
-								<span class="styleOfr1p">年龄</span>
-								<span class="styleOfr1p">所在地  </span>
-							</div>
-							<div id="r1-v">
-								<span class="styleOfw1v">Jyouger</span>
-								<span class="styleOfw1v">man</span>
-								<span class="styleOfw1v">ZJWZ</span>
-								<span class="styleOfw1v">21</span>
-								<span class="styleOfw1v">HZ</span>
-							</div>	
-						</div>
-						<div id="r2"> </div>
-						<div id="r3"> </div>
+					<div id="character">
+						<div id="x"></div>
 					</div>
-					<div id="inweb">
-						<div id="imgContaienrInweb"><img src="p/r2.png" width="100%" height="100%" /></div>
-						<div id="w1"> </div>
-						<div id="w2"> </div>
-						<div id="w3"> </div>
+					<div id="basicMsg">
+						<div id="imgContaienr"><img src="p/r2.png" width="100%" height="100%" /></div>
 					</div>
 				</div>
 				<div id="professionalSkillWindow" class="styleOfTextMsg">
 					<div id="home-langmsgWindow">
-						<div id="langContent"> </div>
+						<div id="langContent">
+							
+						</div>
 					</div>
 					<div id="select-as" class="home-langList">Flash AS</div>
 					<div id="select-java" class="home-langList">Java</div>
