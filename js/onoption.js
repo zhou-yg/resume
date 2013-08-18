@@ -1,7 +1,12 @@
 var onoption = function(){
 	
 	var idArr = new Array();
-	var colorArr = [];
+	var colorArr = new Array();
+	var basicColor;
+	var isdrawed;
+	var isglide;
+	var glideObjArr = new Array();
+	var indexsArr = new Array();
 	var EH = function(){
 		
 		var oncrutObjId;
@@ -21,6 +26,20 @@ var onoption = function(){
 			onchangeColor:function(id){
 				if(id != oncrutObjId){
 					var obj = Im.getObj(id);
+					var idindex = idArr.indexOf(id);
+					obj.style.background = colorArr[idindex];
+						
+					Im.getObj("langContent").style.background = colorArr[idindex];
+					
+					obj.style.color ="#ffffff";
+					this.reset(oncrutObjId);
+					if(isdrawed){
+						linearr[idindex].drawLineTo(indexsArr[0],indexsArr[1],indexsArr[2],indexsArr[3]);
+					}
+					if(isglide){
+						glide.go(id);
+					}
+					/*
 					if(colorArr[idlangArr.indexOf(id)]!=undefined){
 						obj.style.background = colorArr[idlangArr.indexOf(id)];
 						//-----------------------------------------------------------------------------------
@@ -36,38 +55,39 @@ var onoption = function(){
 						lineArr[idlangArr.indexOf(id)].drawLineTo(248, 15.5, 315, 15.5);
 						//--------------------------------------------------------------
 					}
+					*/
 					oncrutObjId = id;
 				}
 			}
 			,
 			outchangeColor:function(id){
-				//-----------------------------------------------------------------------
-				if(lineArr[idlangArr.indexOf(id)]!=undefined){
-					if(!lineArr[idlangArr.indexOf(id)].hasline()){
-						lineArr[idlangArr.indexOf(id)].drawLineTo(248, 15.5, 315, 15.5); ;
+				var idindex = idArr.indexOf(id);
+				if(isdrawed){
+					if(!lineArr[idindex].hasline()){
+						lineArr[idindex].drawLineTo(indexsArr[0],indexsArr[1],indexsArr[2],indexsArr[3]); 
 					}
 				}
-				//------------------------------------------------------------------------
 			}
 			,
 			reset:function(id){
-				if(lineArr[idlangArr.indexOf(id)]!=undefined){
-					lineArr[idlangArr.indexOf(id)].clearLine();
+				var idindex = idArr.indexOf(id);
+				if(isdrawed){
+					lineArr[idindex].clearLine();
 				}
 				var obj = Im.getObj(id);
-				if(idtitleArr.indexOf(id)!=-1){
-					obj.style.background = "none";
-				}else if(idlangArr.indexOf(id)!=-1){
-					obj.style.background = "#ffffff";
-				}
+				obj.style.background = basicColor;
 				obj.style.color = "#000000";
 			}
 		}
 	}();
 	return{
-		init:function(iarr,carr){
-			idArr = iarr;
-			colorArr = carr;
+		init:function(_iarr,_carr,_bc,_isdraw,_isglide,_indexsArr){
+			idArr = _iarr;
+			colorArr = _carr;
+			basicColor = _bc;
+			isdraw = _isdraw;
+			isglide = _isglide;
+			indexsArr = _indexsArr;
 			
 			EH.init();
  
