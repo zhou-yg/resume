@@ -1,5 +1,51 @@
-var glidelr = function() {
-
+var glide = function(){
+	
+	var glideObjArr = new Array();
+	var windowArr = new Array();
+	var titleTypesArr = new Array();
+	var crutObj ;
+	var distance = 830;
+	var direction;
+	return{
+		init:function(_glideArr,_titleTypeArr,_windowArr){
+			if(_titleTypeArr.length == _windowArr.length){
+				glideObjArr = _glideArr;
+				titleTypesArr = _titleTypeArr
+				windowArr = _windowArr;
+				if(_titleTypeArr.length>=1){
+					crutObj = _titleTypeArr[0];
+				}
+			}
+		}
+		,
+		go:function(_id){
+			var priorIndex = titleTypesArr.indexOf(crutObj);
+			var laterIndex = titleTypesArr.indexOf(_id);
+			if(priorIndex!=laterIndex){
+				if(laterIndex>priorIndex){
+					direction = 1;
+				}else{
+					direction = -1;
+				}
+				for(var i=0;i<windowArr.length;i++){
+					glideObjArr[i].go(windowArr[i],distance,direction);
+				}
+				crutObj = _id;
+			}
+		}
+		,
+		reset:function(obj){
+			var deviateIndex = titleTypesArr.indexOf(crutObj);
+			obj.style.left = "-"+deviateIndex*distance+"px";
+		}
+		,
+		param:function(){
+			return [crutObj];
+		}
+	};
+}();
+var glidelr = function(_name) {
+	var name = _name;
 	var glideObj = undefined;
 	var glideDistance = 0;
 	var glideCrutDistance = 0;
@@ -49,20 +95,23 @@ var glidelr = function() {
 		glideAction : function() {
 			if(t<=rate){
 				glideObj.style.left = String(parseInt(Im.getObjStyle(glideObj,"left")) - glideDirection*glideDistance/(2*t))+"px";
-				glideTimeOut = setTimeout("glideLR.glideAction()",speed);
+				glideTimeOut = setTimeout(name+".glideAction()",speed);
+				if(glideCrutDistance<=glideDistance){
+					glideCrutDistance += glideDistance/(2*t);
+				}
+				t=t*2;
 			}else{
 				clearTimeout(glideTimeOut);
 				glideObj.style.left = String(parseInt(Im.getObjStyle(glideObj,"left"))-glideDirection*(glideDistance-glideCrutDistance))+"px";
-				Re.reSet();
+
+				glide.reset(glideObj);	
+
+				Re.reSet();			
 			}
-			if(glideCrutDistance<=glideDistance){
-				glideCrutDistance += glideDistance/(2*t);
-			}
-			t=t*2;
 		}
 		,
 		getArr:function(){
 			return {"gObj":glideObj,"gDirection":glideDistance,"gcDis":glideCrutDistance,"gDistance":glideDirection,"gTimeOut":glideTimeOut,"gT":t};
 		}
 	};
-}();
+};
