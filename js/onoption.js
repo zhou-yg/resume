@@ -7,10 +7,10 @@ var onoption = function(){
 	var isglide;
 	var glideObjArr = new Array();
 	var indexsArr = new Array();
+	var linesArr = new Array();
+
 	var EH = function(){
-		
 		var oncrutObjId;
-		
 		return{
 			init:function(){
 				oncrutObjId = idArr[0];
@@ -34,28 +34,11 @@ var onoption = function(){
 					obj.style.color ="#ffffff";
 					this.reset(oncrutObjId);
 					if(isdrawed){
-						linearr[idindex].drawLineTo(indexsArr[0],indexsArr[1],indexsArr[2],indexsArr[3]);
+						linesArr[idindex].drawLineTo(indexsArr[0],indexsArr[1],indexsArr[2],indexsArr[3]);
 					}
 					if(isglide){
 						glide.go(id);
 					}
-					/*
-					if(colorArr[idlangArr.indexOf(id)]!=undefined){
-						obj.style.background = colorArr[idlangArr.indexOf(id)];
-						//-----------------------------------------------------------------------------------
-						Im.getObj("langContent").style.background = colorArr[idlangArr.indexOf(id)];
-						//-----------------------------------------------------------------------------------
-					}else{
-						obj.style.background = colorArr[0];
-					}
-					obj.style.color = "#ffffff";
-					this.reset(oncrutObjId);
-					if(lineArr[idlangArr.indexOf(id)]!=undefined){
-						//--------------------------------------------------------------
-						lineArr[idlangArr.indexOf(id)].drawLineTo(248, 15.5, 315, 15.5);
-						//--------------------------------------------------------------
-					}
-					*/
 					oncrutObjId = id;
 				}
 			}
@@ -63,8 +46,8 @@ var onoption = function(){
 			outchangeColor:function(id){
 				var idindex = idArr.indexOf(id);
 				if(isdrawed){
-					if(!lineArr[idindex].hasline()){
-						lineArr[idindex].drawLineTo(indexsArr[0],indexsArr[1],indexsArr[2],indexsArr[3]); 
+					if(!linesArr[idindex].hasline()){
+						linesArr[idindex].drawLineTo(indexsArr[0],indexsArr[1],indexsArr[2],indexsArr[3]); 
 					}
 				}
 			}
@@ -72,7 +55,7 @@ var onoption = function(){
 			reset:function(id){
 				var idindex = idArr.indexOf(id);
 				if(isdrawed){
-					lineArr[idindex].clearLine();
+					linesArr[idindex].clearLine();
 				}
 				var obj = Im.getObj(id);
 				obj.style.background = basicColor;
@@ -81,18 +64,22 @@ var onoption = function(){
 		}
 	}();
 	return{
-		init:function(_iarr,_carr,_bc,_isdraw,_isglide,_indexsArr){
+		init:function(_iarr,_carr,_bc,_isdraw,_isglide){
 			idArr = _iarr;
 			colorArr = _carr;
 			basicColor = _bc;
-			isdraw = _isdraw;
+			isdrawed = _isdraw;
 			isglide = _isglide;
-			indexsArr = _indexsArr;
 			
 			EH.init();
  
  			this.setEvent();
 			return idArr;
+		}
+		,
+		setArr:function(_indexsArr,_linesArr){
+			indexsArr = _indexsArr;
+			linesArr = _linesArr;						
 		}
 		,
 		setEvent:function(){
